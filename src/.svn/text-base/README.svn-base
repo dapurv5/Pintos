@@ -1,0 +1,63 @@
+----------------------------------------------------------------------------------------------------------
+Phase 1.1  Removing busy waits
+----------------------------------------------------------------------------------------------------------
+
+Add alarm.c and alarm.h in threads folder. (These files contain the implemetation for the alarm)
+Added the alarm.c in the core kernel of Makefile.build.
+Add variable int64_t time in struct thread which stores the time of awakening.
+From init.c call alarm_init() . You need to include alarm.h to use it.
+Define the my_sleeping_list in alarm.h
+Include state THREAD_SLEEPING in thread.h for sleeping threads which are in my_sleeping_list.
+Add functions thread_sleep() and thread_awake() which work exactly similar to thread_block() and thread_unblock().
+Check for alarm completion at each timer tick in timer_interrupt().
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.2.2  Priority Implementation
+----------------------------------------------------------------------------------------------------------
+
+Added priority.c and priority.h to threads folder and added the .c in the core kernel of Makefile.build.
+Added pick_highest_priority(); priority_more(); my_list_insert_ordered()  and check_preemption() to threads/priority.c .
+Changed implementation of thread_yield() by inserting threads in decreasing priority order.
+Changed implementation of thread_create() by checking for preemption condition.
+check_preemption is also used in threads.c thread_set_priority and sema_up synch.c .
+Note: thread_yield shoukd not be called from thread_awake() and thread_unblock().
+Now ready_queue contains threads with priority in descending order.
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.2.3  Priority Implementation with Donation
+----------------------------------------------------------------------------------------------------------
+In struct thread in thread.h include the following more items.
+bool under_donation
+struct list locks_list
+int true_priority
+struct lock* blocking_lock.
+
+In synch.h struct lock, include a list_elem locks_elem so that the lcok can be stored in list i.e locks_list of struct thread.
+
+In synch.c sema_down instead of pushing back, now we insert the threads in the waiters list sorted according to the priorities.
+(For the test: priority-sema)
+
+In synch.c cond_wait instead of pushing back, now we insert the threads in the waiters list sorted according to the priorities.
+(For the test: priority-condvar)
+
+In priority.c create a function thread_set_ready_priority() which changes the priority of threads in ready queue.
+In thread.c in thread_create() true_priority is set and locks_list is initialized.
+In synch.h in struct semaphore we store struct lock* containing_lock to know in which semaphore is this lock contained.
+In synch.c, initialized lock for that sema in lock_init() and initialized containing_lock to NULL in sema_init().
+
+In synch.c changed sema_down() for priority donation chain.
+
+In synch.c in sema_up(). Whenever a thread releases a lock, sema_up() is called. sema_up() releases the highest priority thread
+waiting in its waiters list. Whenever a lock is released by a thread.Its priority should be set to its true priority and under_
+donation is false.
+
+In synch.c exchanged lines in function lock_release.
+
+In synch.c  check_preemption() condition moved from sema_up() function to lock_release() and cond_signal().
+
+Initialize additional parameters for main in init_thread().
+Insert the lock in locks_list of thread when lock_acquire() is called.
+
+Delete the lock from the locks_list of thread when lock_release is called.
+
+

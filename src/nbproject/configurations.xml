@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <df name="src" root=".">
+      <df name="devices">
+        <in>block.c</in>
+        <in>block.h</in>
+        <in>ide.c</in>
+        <in>ide.h</in>
+        <in>input.c</in>
+        <in>input.h</in>
+        <in>intq.c</in>
+        <in>intq.h</in>
+        <in>kbd.c</in>
+        <in>kbd.h</in>
+        <in>partition.c</in>
+        <in>partition.h</in>
+        <in>pit.c</in>
+        <in>pit.h</in>
+        <in>rtc.c</in>
+        <in>rtc.h</in>
+        <in>serial.c</in>
+        <in>serial.h</in>
+        <in>shutdown.c</in>
+        <in>shutdown.h</in>
+        <in>speaker.c</in>
+        <in>speaker.h</in>
+        <in>timer.c</in>
+        <in>timer.h</in>
+        <in>vga.c</in>
+        <in>vga.h</in>
+      </df>
+      <df name="examples">
+        <df name="lib">
+          <df name="user">
+          </df>
+        </df>
+        <in>bubsort.c</in>
+        <in>cat.c</in>
+        <in>cmp.c</in>
+        <in>cp.c</in>
+        <in>echo.c</in>
+        <in>halt.c</in>
+        <in>hex-dump.c</in>
+        <in>insult.c</in>
+        <in>lineup.c</in>
+        <in>ls.c</in>
+        <in>matmult.c</in>
+        <in>mcat.c</in>
+        <in>mcp.c</in>
+        <in>mkdir.c</in>
+        <in>pwd.c</in>
+        <in>recursor.c</in>
+        <in>rm.c</in>
+        <in>shell.c</in>
+      </df>
+      <df name="filesys">
+        <in>directory.c</in>
+        <in>directory.h</in>
+        <in>file.c</in>
+        <in>file.h</in>
+        <in>file_supplement.c</in>
+        <in>file_supplement.h</in>
+        <in>filesys.c</in>
+        <in>filesys.h</in>
+        <in>free-map.c</in>
+        <in>free-map.h</in>
+        <in>fsutil.c</in>
+        <in>fsutil.h</in>
+        <in>inode.c</in>
+        <in>inode.h</in>
+        <in>off_t.h</in>
+      </df>
+      <df name="lib">
+        <df name="kernel">
+          <in>bitmap.c</in>
+          <in>bitmap.h</in>
+          <in>console.c</in>
+          <in>console.h</in>
+          <in>debug.c</in>
+          <in>hash.c</in>
+          <in>hash.h</in>
+          <in>list.c</in>
+          <in>list.h</in>
+          <in>stdio.h</in>
+        </df>
+        <df name="user">
+          <in>console.c</in>
+          <in>debug.c</in>
+          <in>entry.c</in>
+          <in>stdio.h</in>
+          <in>syscall.c</in>
+          <in>syscall.h</in>
+        </df>
+        <in>arithmetic.c</in>
+        <in>ctype.h</in>
+        <in>debug.c</in>
+        <in>debug.h</in>
+        <in>inttypes.h</in>
+        <in>limits.h</in>
+        <in>packed.h</in>
+        <in>random.c</in>
+        <in>random.h</in>
+        <in>round.h</in>
+        <in>stdarg.h</in>
+        <in>stdbool.h</in>
+        <in>stddef.h</in>
+        <in>stdint.h</in>
+        <in>stdio.c</in>
+        <in>stdio.h</in>
+        <in>stdlib.c</in>
+        <in>stdlib.h</in>
+        <in>string.c</in>
+        <in>string.h</in>
+        <in>syscall-nr.h</in>
+        <in>ustar.c</in>
+        <in>ustar.h</in>
+      </df>
+      <df name="misc">
+      </df>
+      <df name="tests">
+        <df name="Algorithm">
+        </df>
+        <df name="filesys">
+          <df name="base">
+            <in>child-syn-read.c</in>
+            <in>child-syn-wrt.c</in>
+            <in>lg-create.c</in>
+            <in>lg-full.c</in>
+            <in>lg-random.c</in>
+            <in>lg-seq-block.c</in>
+            <in>lg-seq-random.c</in>
+            <in>sm-create.c</in>
+            <in>sm-full.c</in>
+            <in>sm-random.c</in>
+            <in>sm-seq-block.c</in>
+            <in>sm-seq-random.c</in>
+            <in>syn-read.c</in>
+            <in>syn-read.h</in>
+            <in>syn-remove.c</in>
+            <in>syn-write.c</in>
+            <in>syn-write.h</in>
+          </df>
+          <df name="extended">
+            <in>child-syn-rw.c</in>
+            <in>dir-empty-name.c</in>
+            <in>dir-mk-tree.c</in>
+            <in>dir-mkdir.c</in>
+            <in>dir-open.c</in>
+            <in>dir-over-file.c</in>
+            <in>dir-rm-cwd.c</in>
+            <in>dir-rm-parent.c</in>
+            <in>dir-rm-root.c</in>
+            <in>dir-rm-tree.c</in>
+            <in>dir-rmdir.c</in>
+            <in>dir-under-file.c</in>
+            <in>dir-vine.c</in>
+            <in>grow-create.c</in>
+            <in>grow-dir-lg.c</in>
+            <in>grow-file-size.c</in>
+            <in>grow-root-lg.c</in>
+            <in>grow-root-sm.c</in>
+            <in>grow-seq-lg.c</in>
+            <in>grow-seq-sm.c</in>
+            <in>grow-sparse.c</in>
+            <in>grow-tell.c</in>
+            <in>grow-two-files.c</in>
+            <in>mk-tree.c</in>
+            <in>mk-tree.h</in>
+            <in>syn-rw.c</in>
+            <in>syn-rw.h</in>
+            <in>tar.c</in>
+          </df>
+          <in>seq-test.c</in>
+          <in>seq-test.h</in>
+        </df>
+        <df name="internal">
+          <in>list.c</in>
+          <in>stdio.c</in>
+          <in>stdlib.c</in>
+        </df>
+        <df name="threads">
+          <in>alarm-negative.c</in>
+          <in>alarm-priority.c</in>
+          <in>alarm-simultaneous.c</in>
+          <in>alarm-wait.c</in>
+          <in>alarm-zero.c</in>
+          <in>mlfqs-block.c</in>
+          <in>mlfqs-fair.c</in>
+          <in>mlfqs-load-1.c</in>
+          <in>mlfqs-load-60.c</in>
+          <in>mlfqs-load-avg.c</in>
+          <in>mlfqs-recent-1.c</in>
+          <in>priority-change.c</in>
+          <in>priority-condvar.c</in>
+          <in>priority-donate-chain.c</in>
+          <in>priority-donate-lower.c</in>
+          <in>priority-donate-multiple.c</in>
+          <in>priority-donate-multiple2.c</in>
+          <in>priority-donate-nest.c</in>
+          <in>priority-donate-one.c</in>
+          <in>priority-donate-sema.c</in>
+          <in>priority-fifo.c</in>
+          <in>priority-preempt.c</in>
+          <in>priority-sema.c</in>
+          <in>tests.c</in>
+          <in>tests.h</in>
+        </df>
+        <df name="userprog">
+          <df name="lib">
+            <df name="user">
+            </df>
+          </df>
+          <df name="no-vm">
+            <in>multi-oom.c</in>
+          </df>
+          <in>args.c</in>
+          <in>bad-jump.c</in>
+          <in>bad-jump2.c</in>
+          <in>bad-read.c</in>
+          <in>bad-read2.c</in>
+          <in>bad-write.c</in>
+          <in>bad-write2.c</in>
+          <in>boundary.c</in>
+          <in>boundary.h</in>
+          <in>child-bad.c</in>
+          <in>child-close.c</in>
+          <in>child-rox.c</in>
+          <in>child-simple.c</in>
+          <in>close-bad-fd.c</in>
+          <in>close-normal.c</in>
+          <in>close-stdin.c</in>
+          <in>close-stdout.c</in>
+          <in>close-twice.c</in>
+          <in>create-bad-ptr.c</in>
+          <in>create-bound.c</in>
+          <in>create-empty.c</in>
+          <in>create-exists.c</in>
+          <in>create-long.c</in>
+          <in>create-normal.c</in>
+          <in>create-null.c</in>
+          <in>exec-arg.c</in>
+          <in>exec-bad-ptr.c</in>
+          <in>exec-missing.c</in>
+          <in>exec-multiple.c</in>
+          <in>exec-once.c</in>
+          <in>exit.c</in>
+          <in>halt.c</in>
+          <in>multi-child-fd.c</in>
+          <in>multi-recurse.c</in>
+          <in>open-bad-ptr.c</in>
+          <in>open-boundary.c</in>
+          <in>open-empty.c</in>
+          <in>open-missing.c</in>
+          <in>open-normal.c</in>
+          <in>open-null.c</in>
+          <in>open-twice.c</in>
+          <in>read-bad-fd.c</in>
+          <in>read-bad-ptr.c</in>
+          <in>read-boundary.c</in>
+          <in>read-normal.c</in>
+          <in>read-stdout.c</in>
+          <in>read-zero.c</in>
+          <in>rox-child.c</in>
+          <in>rox-multichild.c</in>
+          <in>rox-simple.c</in>
+          <in>sc-bad-arg.c</in>
+          <in>sc-bad-sp.c</in>
+          <in>sc-boundary-2.c</in>
+          <in>sc-boundary.c</in>
+          <in>wait-bad-pid.c</in>
+          <in>wait-killed.c</in>
+          <in>wait-simple.c</in>
+          <in>wait-twice.c</in>
+          <in>write-bad-fd.c</in>
+          <in>write-bad-ptr.c</in>
+          <in>write-boundary.c</in>
+          <in>write-normal.c</in>
+          <in>write-stdin.c</in>
+          <in>write-zero.c</in>
+        </df>
+        <df name="vm">
+          <in>child-inherit.c</in>
+          <in>child-linear.c</in>
+          <in>child-mm-wrt.c</in>
+          <in>child-qsort-mm.c</in>
+          <in>child-qsort.c</in>
+          <in>child-sort.c</in>
+          <in>mmap-bad-fd.c</in>
+          <in>mmap-clean.c</in>
+          <in>mmap-close.c</in>
+          <in>mmap-exit.c</in>
+          <in>mmap-inherit.c</in>
+          <in>mmap-misalign.c</in>
+          <in>mmap-null.c</in>
+          <in>mmap-over-code.c</in>
+          <in>mmap-over-data.c</in>
+          <in>mmap-over-stk.c</in>
+          <in>mmap-overlap.c</in>
+          <in>mmap-read.c</in>
+          <in>mmap-remove.c</in>
+          <in>mmap-shuffle.c</in>
+          <in>mmap-twice.c</in>
+          <in>mmap-unmap.c</in>
+          <in>mmap-write.c</in>
+          <in>mmap-zero.c</in>
+          <in>page-linear.c</in>
+          <in>page-merge-mm.c</in>
+          <in>page-merge-par.c</in>
+          <in>page-merge-seq.c</in>
+          <in>page-merge-stk.c</in>
+          <in>page-parallel.c</in>
+          <in>page-shuffle.c</in>
+          <in>parallel-merge.c</in>
+          <in>parallel-merge.h</in>
+          <in>pt-bad-addr.c</in>
+          <in>pt-bad-read.c</in>
+          <in>pt-big-stk-obj.c</in>
+          <in>pt-grow-bad.c</in>
+          <in>pt-grow-pusha.c</in>
+          <in>pt-grow-stack.c</in>
+          <in>pt-grow-stk-sc.c</in>
+          <in>pt-write-code-2.c</in>
+          <in>pt-write-code.c</in>
+          <in>qsort.c</in>
+          <in>qsort.h</in>
+        </df>
+        <in>arc4.c</in>
+        <in>arc4.h</in>
+        <in>cksum.c</in>
+        <in>cksum.h</in>
+        <in>lib.c</in>
+        <in>lib.h</in>
+        <in>main.c</in>
+        <in>main.h</in>
+      </df>
+      <df name="threads">
+        <in>BSDScheduler.c</in>
+        <in>BSDScheduler.h</in>
+        <in>alarm.c</in>
+        <in>alarm.h</in>
+        <in>fixed-point.c</in>
+        <in>fixed-point.h</in>
+        <in>flags.h</in>
+        <in>init.c</in>
+        <in>init.h</in>
+        <in>interrupt.c</in>
+        <in>interrupt.h</in>
+        <in>intr-stubs.h</in>
+        <in>io.h</in>
+        <in>loader.h</in>
+        <in>malloc.c</in>
+        <in>malloc.h</in>
+        <in>palloc.c</in>
+        <in>palloc.h</in>
+        <in>priority.c</in>
+        <in>priority.h</in>
+        <in>pte.h</in>
+        <in>switch.h</in>
+        <in>synch.c</in>
+        <in>synch.h</in>
+        <in>thread.c</in>
+        <in>thread.h</in>
+        <in>vaddr.h</in>
+      </df>
+      <df name="userprog">
+        <in>argument_passing.c</in>
+        <in>argument_passing.h</in>
+        <in>exception.c</in>
+        <in>exception.h</in>
+        <in>gdt.c</in>
+        <in>gdt.h</in>
+        <in>pagedir.c</in>
+        <in>pagedir.h</in>
+        <in>process.c</in>
+        <in>process.h</in>
+        <in>syscall.c</in>
+        <in>syscall.h</in>
+        <in>tss.c</in>
+        <in>tss.h</in>
+        <in>user_memory.c</in>
+        <in>user_memory.h</in>
+      </df>
+      <df name="utils">
+        <in>setitimer-helper.c</in>
+        <in>squish-pty.c</in>
+        <in>squish-unix.c</in>
+      </df>
+      <df name="vm">
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>Makefile-src.mk</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile-src.mk</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>$(MAKE) -f Makefile</buildCommand>
+          <cleanCommand>$(MAKE) -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="devices/block.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/ide.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/input.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/intq.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/kbd.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/partition.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/pit.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/serial.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/shutdown.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/speaker.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/timer.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="devices/vga.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="examples/insult.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <folder path="src/devices">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/filesys">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/tests/filesys/base">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/tests/threads">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/tests/userprog">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/tests/userprog/no-vm">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/tests/vm">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/threads">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="src/userprog">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="filesys/directory.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="filesys/free-map.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="filesys/inode.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/kernel/bitmap.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/kernel/console.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/kernel/debug.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/kernel/hash.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/user/console.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="lib/user/debug.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/arc4.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/cksum.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/base/child-syn-read.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/base/child-syn-wrt.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/base/syn-read.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/base/syn-remove.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/base/syn-write.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/child-syn-rw.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-empty-name.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-mk-tree.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-mkdir.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-open.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-over-file.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-rm-cwd.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-rm-parent.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-rm-root.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-rm-tree.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-rmdir.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-under-file.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/dir-vine.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-create.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-dir-lg.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-file-size.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-root-lg.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-root-sm.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-seq-lg.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-seq-sm.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-sparse.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-tell.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/grow-two-files.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/mk-tree.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/syn-rw.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/extended/tar.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/filesys/seq-test.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/internal/list.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/internal/stdlib.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/lib.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/main.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/alarm-negative.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/alarm-priority.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/alarm-simultaneous.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/alarm-wait.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/alarm-zero.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-block.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-fair.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-load-1.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-load-60.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-load-avg.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/mlfqs-recent-1.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/priority-condvar.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/priority-fifo.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/priority-sema.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/threads/tests.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/userprog/boundary.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/userprog/multi-recurse.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/userprog/sc-bad-arg.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/userprog/sc-boundary-2.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/userprog/sc-boundary.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/child-qsort-mm.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/child-qsort.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/child-sort.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/mmap-over-code.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/mmap-over-data.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/mmap-over-stk.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tests/vm/qsort.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/alarm.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/fixed-point.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/init.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/interrupt.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/malloc.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/palloc.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>lib/kernel</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="threads/thread.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/argument_passing.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/gdt.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/process.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/syscall.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/tss.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="userprog/user_memory.c" ex="false" tool="0">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

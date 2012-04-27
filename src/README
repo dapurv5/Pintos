@@ -1,0 +1,138 @@
+##########################################################################################################
+
+Project 1 : THREADS
+
+##########################################################################################################
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.1  Removing busy waits
+----------------------------------------------------------------------------------------------------------
+
+Add alarm.c and alarm.h in threads folder. (These files contain the implemetation for the alarm)
+Added the alarm.c in the core kernel of Makefile.build.
+Add variable int64_t time in struct thread which stores the time of awakening.
+From init.c call alarm_init() . You need to include alarm.h to use it.
+Define the my_sleeping_list in alarm.h
+Include state THREAD_SLEEPING in thread.h for sleeping threads which are in my_sleeping_list.
+Add functions thread_sleep() and thread_awake() in "threads/thread.c" which work exactly similar to thread_block() and thread_unblock().
+Check for alarm completion at each timer tick in timer_interrupt().
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.2.2  Priority Implementation
+----------------------------------------------------------------------------------------------------------
+
+Added priority.c and priority.h to threads folder and added the .c in the core kernel of Makefile.build.
+Added pick_highest_priority(); priority_more(); my_list_insert_ordered()  and check_preemption() to threads/priority.c .
+Changed implementation of thread_yield() by inserting threads in decreasing priority order.
+Changed implementation of thread_create() by checking for preemption condition.
+check_preemption is also used in threads.c thread_set_priority and sema_up synch.c .
+Note: thread_yield shoukd not be called from thread_awake() and thread_unblock().
+Now ready_queue contains threads with priority in descending order.
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.2.3  Priority Implementation with Donation
+----------------------------------------------------------------------------------------------------------
+In struct thread in thread.h include the following more items.
+bool under_donation
+struct list locks_list
+int true_priority
+struct lock* blocking_lock.
+
+In synch.h struct lock, include a list_elem locks_elem so that the lcok can be stored in list i.e locks_list of struct thread.
+
+In synch.c sema_down instead of pushing back, now we insert the threads in the waiters list sorted according to the priorities.
+(For the test: priority-sema)
+
+In synch.c cond_wait instead of pushing back, now we insert the threads in the waiters list sorted according to the priorities.
+(For the test: priority-condvar)
+
+In priority.c create a function thread_set_ready_priority() which changes the priority of threads in ready queue.
+In thread.c in thread_create() true_priority is set and locks_list is initialized.
+In synch.h in struct semaphore we store struct lock* containing_lock to know in which semaphore is this lock contained.
+In synch.c, initialized lock for that sema in lock_init() and initialized containing_lock to NULL in sema_init().
+
+In synch.c changed sema_down() for priority donation chain.
+
+In synch.c in sema_up(). Whenever a thread releases a lock, sema_up() is called. sema_up() releases the highest priority thread
+waiting in its waiters list. Whenever a lock is released by a thread.Its priority should be set to its true priority and under_
+donation is false.
+
+In synch.c exchanged lines in function lock_release.
+
+In synch.c  check_preemption() condition moved from sema_up() function to lock_release() and cond_signal().
+
+Initialize additional parameters for main in init_thread().
+Insert the lock in locks_list of thread when lock_acquire() is called.
+
+Delete the lock from the locks_list of thread when lock_release is called.
+
+For priority-condvar, moved struct semaphore_elem to synch.h and added an additional parameter priority.
+
+----------------------------------------------------------------------------------------------------------
+Phase 1.3  BSD Scheduling
+----------------------------------------------------------------------------------------------------------
+
+Added BSDScheduling.c and BSDScheduling.h to threads folder and added the .c file to the core kernel of Makefile.build.
+Added fixed-point.c fixed-point.h file to threads folder for 17.14 fixed point operations as per Appendix B.4 page 101-102
+and added the .c file to the core kernel of Makefile.build.
+
+Changed the idle_thread, all_list from static type in thread.c to extern type in thread.h .
+Changed static declaration of is_thread(t) in thread.c .
+
+Added the attribute int nice, int recent_cpu to struct thread in thread.h .
+Defined macros NICE_MAX 20, NICE_DEFAULT 0 and NICE_MIN -20 in thread.h .
+Added sort_list_priority() to priority.c and priority.h
+
+Implemented the unimplemented functions thread_set_nice(int nice), thread_get_nice ()
+ thread_get_load_avg () and thread_get_recent_cpu () in thread.c
+Added int load_avg in thread.c and extern int load_avg in thread.h .
+
+In the init_thread() set the nice value of thread to be default value in init_thread.
+In the thread_create() calculated the priority value of new thread in case thread_mlfqs is true.
+
+Recalculated recent_cpu and priority for thread_current() each time.
+ the nice value for nice is set in set_new thread_set_nice().
+
+Recalculated recent_cpu of thread_current (increment by 1), threads in all_list, load_avg at each timer tick
+and priority of threads in all_list at every 4th tick in timer.c timer_interrupt().
+
+Recalculated recent_cpu of thread_current (increment by 1), threads in all_list, load_avg at each timer tick
+
+----------------------------------------------------------------------------------------------------------
+
+##########################################################################################################
+
+Project 2 : USER PROGRAMS
+
+##########################################################################################################
+
+
+----------------------------------------------------------------------------------------------------------
+Phase 2.1.1 ARGUMENT PASSING
+----------------------------------------------------------------------------------------------------------
+Added argument_passing.c and argument_passing.h to userprog folder and added the .c file to the core kernel of Makefile.build.
+
+Comment this piece of code in validate_segment() of process.c for successful creation of filesystem.
+  //if (phdr->p_vaddr < PGSIZE)
+  //  return false;
+
+Modified static void start_process (void *file_name_) of process.c.
+    -Called push_arguments(&if_.esp, file_name) of argument_passing.c .
+    -Passed only the exec_file_name component of the file_name_ to load().
+
+Modified struct thread in thread.h of threads folder and added
+    - struct list child_list;             /* Storing the child threads. */
+    - struct list_elem child_elem;        /* Element for child_list. */
+    - struct thread* parent;              /* Pointer to the parent thread */
+    - struct semaphore wait;              /* Semaphore for wait*/
+    - struct list open_files_list;        /* Open files for a thread. */
+    - int load_status;                    /* Load status of a thread. */
+    - int exit_status;                    /* Exit status of a thread. */
+Modified struct file in file.h of filesys folder
+
+
+
+
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------

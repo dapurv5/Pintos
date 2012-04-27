@@ -1,0 +1,17 @@
+#include <lib/kernel/list.h>
+#include "threads/interrupt.h"
+#include "threads/thread.h"
+
+
+
+struct thread* pick_highest_priority(void);
+bool priority_more (struct list_elem* e1, struct list_elem* e2, void *aux);
+
+bool priority_more_condvar (struct list_elem *a_, struct list_elem *b_,void *aux UNUSED);
+
+bool check_preemption();
+void my_list_insert_ordered (struct list *list, struct list_elem *elem,list_less_func *more, void *aux);
+
+void thread_set_ready_priority (struct thread* t, int new_priority);
+
+void thread_set_true_priority(struct thread* t);
